@@ -148,13 +148,11 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 **Wartung und Sicherheitsupdates**
 
 - Seite gerendert -> kein Zugriff aufs Backend
--
+- **Feature Breaking und Portierung**
 
-**Feature Breaking und Portierung**
+  **Plugin Hoelle**
 
-**Plugin Hoelle**
-
----
+  ***
 
 ## Skalierungsprobleme
 
@@ -217,14 +215,29 @@ Datenbank
 
 ## Workflow
 
-- SSG aussuchen
-- Seiten tempalten
-- mit Content befuellen
-- Deployen
+---
+
+## SSG ausschen
+
+Faktoren
 
 ---
 
-## Umstellung des Workflows
+## Template
+
+entweder schreiben oder sich eins raussuchen
+
+---
+
+## Mit Content fuellen API oder lokal
+
+---
+
+## Deployen
+
+---
+
+## Umstellung des Workflows am Beispiel Wordpress API
 
 - Wordpress API
   - [REST API Handbook | WordPress Developer Resources](https://developer.wordpress.org/rest-api/)
