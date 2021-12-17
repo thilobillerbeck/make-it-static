@@ -35,10 +35,6 @@ Master Informatik Student TU Darmstadt
 
 ---
 
-# Motivation
-
----
-
 ## CMS und Sicherheitsluecken
 
 <!--
@@ -139,10 +135,6 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 
 ---
 
-# Gegendarstellung
-
----
-
 ## Vergleich CMS und Wartungsaufwand
 
 **Wartung und Sicherheitsupdates**
@@ -213,7 +205,7 @@ Datenbank
 
 ---
 
-## Workflow
+## Workflow am Beispiel von Hugo
 
 ---
 
@@ -231,9 +223,15 @@ entweder schreiben oder sich eins raussuchen
 
 ## Mit Content fuellen API oder lokal
 
+Methoden von API nehmen
+
 ---
 
 ## Deployen
+
+Netlify, Vercel, Pages, nginx
+
+CI und git
 
 ---
 
@@ -248,13 +246,28 @@ entweder schreiben oder sich eins raussuchen
 
 # Advanced Stuff
 
-- SSGs mit Javascript (Hydration)
-  - [Achieving lazy hydration in Vue 3 from scratch - LogRocket Blog](https://blog.logrocket.com/vue-3-lazy-hydration-from-scratch/)
-- Partial Server Side Rendering
-  - [Server Side Rendering (SSR) vs. Client Side Rendering (CSR) vs. Pre-Rendering using Static Site Generators (SSG) and client-side hydration. | by Prashant Ram | Oct, 2021 | Medium](https://medium.com/@prashantramnyc/server-side-rendering-ssr-vs-client-side-rendering-csr-vs-pre-rendering-using-static-site-89f2d05182ef)
-- Hybride CMS
-  - CMS mit SSG
-- Spass mit Webserver Configs
-  - nginx Stuff
+## Hydration
+
+[Achieving lazy hydration in Vue 3 from scratch - LogRocket Blog](https://blog.logrocket.com/vue-3-lazy-hydration-from-scratch/)
 
 ---
+
+## Partial Server Side Rendering
+
+[Server Side Rendering (SSR) vs. Client Side Rendering (CSR) vs. Pre-Rendering using Static Site Generators (SSG) and client-side hydration. | by Prashant Ram | Oct, 2021 | Medium](https://medium.com/@prashantramnyc/server-side-rendering-ssr-vs-client-side-rendering-csr-vs-pre-rendering-using-static-site-89f2d05182ef)
+
+---
+
+## Hybride CMS
+
+Moeglichkeiten der SSG wie etwa Grav oder Kirby
+
+static HTML CMS wie NEOS
+
+---
+
+# Fazit
+
+---
+
+# Vielen Dank
