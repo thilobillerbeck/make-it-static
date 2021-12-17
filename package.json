@@ -13,6 +13,7 @@
   },
   "name": "slidev",
   "devDependencies": {
+    "@iconify-json/noto": "^1.0.3",
     "@iconify-json/simple-icons": "^1.0.13"
   }
 }
