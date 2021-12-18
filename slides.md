@@ -140,20 +140,29 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 **Wartung und Sicherheitsupdates**
 
 - Seite gerendert -> kein Zugriff aufs Backend
-- **Feature Breaking und Portierung**
+- Wenn die Seite einmal online ist, braucht sie keine Updates da kein Rendering
+- lediglich Backend benoetigt Wartung
 
-  **Plugin Hoelle**
+**Feature Breaking und Portierung**
 
-  ***
+- Inhalte ueber Standards
+- Durch Standards in der Generierung Portierung sehr einfach
+
+**Plugin Hoelle**
+
+- Plugins werden meist nicht benoetigt
+- koennen relativ gekapselt voneinander verwendet werden
+
+---
 
 ## Skalierungsprobleme
 
-Webserver und Runtime
+**Webserver und Runtime**
 
 - Webserver / CDN als einzige Limitation
 - ausrollen sehr einfach
 
-Datenbank
+**Datenbank**
 
 - Auch hier APIs als limitierender Faktor
   - Selbst wenn die Last gross ist, kann bereits Content an den Nutzer ausgeliefert werden (s. Hydration)
@@ -185,27 +194,42 @@ Datenbank
 
 ## Typischer Aufbau einer Seite
 
-- Content
-- Template
-- Theme
-- Optionen
-- statische Assets
+Eine statische Seite besteht meistens aus:
+
+- Inhalten / Daten (Markdown, YAML, JSON, ...)
+- Templates und / oder Themes (HTML Templates, Partials, ...)
+- Konfiguration (Wie soll was funktonieren?)
+- Binaries / statischen Assets (Bilder, Fonts, Scripts, ...)
+
+Beispiel Hugo:
+
+├── config.toml // Konfiguration
+├── content // semi- und unstrukturierte Inhalt der Seite bspw. in Markdown
+├── data // strukturierte Daten in YAML, JSON, TOML, ...
+├── static // statische Assets
+└── themes // Themes (meistens separates Repo)
+├── layouts // Layouts (ueberschreiben Themes)
 
 ---
 
 ## Wie funktioniert ein SSG?
 
-- Modulare Struktur
+Idee schrittweise zeigen
+
+1. Initiales Tempalte
+2. Befuellen von Head, Footer, Main
+3. Befuellen von Head und Fotter mit Metatags und Assets
+4. Rendern Inhalt
+
 - Wo kommt was hin?
   - Content
   - Assets
   - Kontext (globaler Kontext, Meta)
   - Zusammenbau der Seite
-- Modularitaet
 
 ---
 
-## Workflow am Beispiel von Hugo
+## Workflow
 
 ---
 
@@ -213,17 +237,27 @@ Datenbank
 
 Faktoren
 
+- Technische Vorknenntnisse / Vorlieben
+- Kompatibilitaet
+- Plugins
+
 ---
 
 ## Template
 
 entweder schreiben oder sich eins raussuchen
 
+- Aussuchen
+- Portieren
+
 ---
 
 ## Mit Content fuellen API oder lokal
 
 Methoden von API nehmen
+
+- Lokal (Markdown, JSON, YAML, ...)
+- API REST / GraphQL
 
 ---
 
