@@ -16,12 +16,15 @@ info: |
 # persist drawings in exports and build
 drawings:
   persist: false
+layout: center
 ---
 
 # make-it-static
 
 ---
-
+layout: image-right
+image: https://source.unsplash.com/1600x900/?beach
+---
 # Wer bin ich?
 
 Thilo Billerbeck B.Sc.
@@ -191,30 +194,151 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 ![Local Image](/darmstadt-ccc-de.jpeg)
 
 ---
+layout: center
+---
 
-## Typischer Aufbau einer Seite
 
-Eine statische Seite besteht meistens aus:
+<h2 class="text-center">Bausteine</h2>
 
-- Inhalten / Daten (Markdown, YAML, JSON, ...)
-- Templates und / oder Themes (HTML Templates, Partials, ...)
-- Konfiguration (Wie soll was funktonieren?)
-- Binaries / statischen Assets (Bilder, Fonts, Scripts, ...)
+<div class="flex flex-col">
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Inhalten / Daten</div><div class="text-sm text-gray-300">Markdown, YAML, JSON, ...</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Templates und / oder Themes</div><div class="text-sm text-gray-300">HTML Templates, Partials, ...</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Konfiguration</div><div class="text-sm text-gray-300">Config Files (TOML, YAML, ...</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">statische Assets</div><div class="text-sm text-gray-300">Bilder, Fonts, Scripts, Styles, ...</div></div>
+</div>
 
-Beispiel Hugo:
 
-├── config.toml // Konfiguration
-├── content // semi- und unstrukturierte Inhalt der Seite bspw. in Markdown
-├── data // strukturierte Daten in YAML, JSON, TOML, ...
-├── static // statische Assets
-└── themes // Themes (meistens separates Repo)
-├── layouts // Layouts (ueberschreiben Themes)
+---
+layout: center
+---
+
+<h2 class="text-center">Ordnerstruktur Hugo</h2>
+
+<div class="grid grid-cols-[1fr,3fr] width-screen">
+<div class="font-bold bg-gray-800 p-2">
+<mdi:file/> config.toml
+</div>
+<div class="w-full p-2">
+Konfiguration
+</div>
+
+<div class="font-bold bg-gray-800 p-2">
+<mdi:folder/> content
+</div>
+<div class="w-full p-2">
+semi- und unstrukturierte Inhalt der Seite bspw. in Markdown
+</div>
+
+<div class="font-bold bg-gray-800 p-2">
+<mdi:folder/> data
+</div>
+<div class="w-full p-2">
+strukturierte Daten in YAML, JSON, TOML, ...
+</div>
+
+<div class="font-bold bg-gray-800 p-2">
+<mdi:folder/> static
+</div>
+<div class="w-full p-2">
+statische Assets
+</div>
+
+<div class="font-bold bg-gray-800 p-2">
+<mdi:folder/> themes
+</div>
+<div class="w-full p-2">
+Themes (meistens separates Repo)
+</div>
+
+<div class="font-bold bg-gray-800 p-2">
+<mdi:folder/> layouts
+</div>
+<div class="w-full p-2">
+Layouts (ueberschreiben Themes)
+</div>
+
+</div>
+---
+layout: two-cols
+---
+
+<template v-slot:default>
+
+```bash
+ |-impressum.md
+ |-unterstuetzen.md
+ |-hackspace.md
+ |-freifunk.md
+ |-c-radar.md
+ |-wizardsofdos.md
+ |-posts
+ | |-2018-02-01-aktivitätsbericht-2017.md
+ | |-2015-12-27-32C3.md
+ | |-2018-10-14-hacktoberfest.md
+ | |-2020-06-06-are-you-still-there.md
+...
+ |-kontakt.md
+ |-termine.html
+
+```
+
+</template>
+<template v-slot:right>
+
+# Inhalte
+
+This shows on the right
+
+</template>
+
+---
+layout: two-cols
+---
+
+<template v-slot:default>
+
+```markdown
+---
+layout: page
+title: Freifunk
+menu:
+  left:
+    weight: 4
+hero: heroes/freifunk.jpg
+---
+
+[**Freifunk Darmstadt**](https://darmstadt.freifunk.net/)baut ein freies und
+dezentrales WLAN-Netzwerk über Darmstadt auf und bietet darüber anonymen
+Internetzugang an. Mittels handelsüblicher WLAN-Accesspoints kann jeder einen
+Teil seiner Internet-Bandbreite oder eine tolle Location beitragen. Wenn du dich
+schon immer gefragt hast, warum es hier kein öffentliches WLAN gibt, dann ist
+Freifunk dein Projekt!
+```
+
+</template>
+<template v-slot:right>
+
+# Inhalte aus Dateien
+
+This shows on the right
+
+</template>
+
 
 ---
 
-## Wie funktioniert ein SSG?
+# Weitere Moelgichkeiten
 
-Idee schrittweise zeigen
+Inhalte aus APIS
+INhalte aus strukturierten Daten
+
+---
+
+# Themes
+
+Blockdiagramm mit Themenbloecken
+
+Idee schrittweise zeigen`
 
 1. Initiales Tempalte
 2. Befuellen von Head, Footer, Main
@@ -228,39 +352,6 @@ Idee schrittweise zeigen
   - Zusammenbau der Seite
 
 ---
-
-## Workflow
-
----
-
-## SSG ausschen
-
-Faktoren
-
-- Technische Vorknenntnisse / Vorlieben
-- Kompatibilitaet
-- Plugins
-
----
-
-## Template
-
-entweder schreiben oder sich eins raussuchen
-
-- Aussuchen
-- Portieren
-
----
-
-## Mit Content fuellen API oder lokal
-
-Methoden von API nehmen
-
-- Lokal (Markdown, JSON, YAML, ...)
-- API REST / GraphQL
-
----
-
 ## Deployen
 
 Netlify, Vercel, Pages, nginx
@@ -302,6 +393,8 @@ static HTML CMS wie NEOS
 
 # Fazit
 
+---
+layout: center
 ---
 
 # Vielen Dank
