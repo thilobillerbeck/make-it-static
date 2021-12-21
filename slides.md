@@ -333,6 +333,18 @@ Inhalte aus APIS
 INhalte aus strukturierten Daten
 
 ---
+layout: two-cols
+---
+<template v-slot:default>
+
+<div class="bg-blue-500 h-100 m-4 p-4 flex flex-col">
+<div class="bg-red-500 p-4 text-center flex flex-col">Header</div>
+<div class="bg-orange-500 p-4 text-center flex flex-col flex-1">Main</div>
+<div class="bg-green-500 p-4 text-center flex flex-col">Main</div>
+</div>
+
+</template>
+<template v-slot:right>
 
 # Themes
 
@@ -350,6 +362,8 @@ Idee schrittweise zeigen`
   - Assets
   - Kontext (globaler Kontext, Meta)
   - Zusammenbau der Seite
+
+</template>
 
 ---
 ## Deployen
