@@ -324,7 +324,6 @@ This shows on the right
 
 </template>
 
-
 ---
 
 # Weitere Moelgichkeiten
@@ -336,41 +335,109 @@ INhalte aus strukturierten Daten
 layout: two-cols
 ---
 <template v-slot:default>
-
 <div class="bg-blue-500 h-100 m-4 p-4 flex flex-col">
+<div class="pb-4 text-center">Base</div>
 <div class="bg-red-500 p-4 text-center flex flex-col">Header</div>
 <div class="bg-orange-500 p-4 text-center flex flex-col flex-1">Main</div>
-<div class="bg-green-500 p-4 text-center flex flex-col">Main</div>
+<div class="bg-green-500 p-4 text-center flex flex-col">Footer</div>
+
 </div>
 
 </template>
 <template v-slot:right>
 
-# Themes
+## Themes
 
-Blockdiagramm mit Themenbloecken
+- Grundgeruest der Seite.Sc
+- Besteht meistens aus einerm Basistempalte
+- Template wird befuellt mit Bloecken
+- Typische Aufteilung in 3 Bloekce (Header, Main, Foter)
 
-Idee schrittweise zeigen`
+<b class="text-red-300">Header: </b>Metadaten, CSS, JS, Icons, ...
 
-1. Initiales Tempalte
-2. Befuellen von Head, Footer, Main
-3. Befuellen von Head und Fotter mit Metatags und Assets
-4. Rendern Inhalt
+<b class="text-orange-300">Main: </b>Content und Struktur, ...
 
-- Wo kommt was hin?
-  - Content
-  - Assets
-  - Kontext (globaler Kontext, Meta)
-  - Zusammenbau der Seite
+<b class="text-green-300">Footer: </b>JS, Links, Copyright, ...
 
 </template>
 
 ---
+
+## Templates
+
+- Bestimmen Aufbau der Seite
+- spezifiziert Content Rendering
+- meistens auch Einbindung der Assets und deren Verarbeitung
+
+<b>Beispiel Hugo baseof.html: </b>
+```html
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "header.html" . -}} {{- block "main" . }}{{- end }} {{- partial
+    "footer.html" . -}} {{- partial "scripts.html" . -}}
+  </body>
+</html>
+```
+
+---
+
+<b>Beispiel Hugo Auszug head.html: </b>
+
+```html
+<head>
+  ...
+  <title>
+    {{ if not .Page.IsHome }} {{ .Page.Title }} | {{ end }}{{ .Site.Title }}
+  </title>
+  <meta name="description" content="{{ .Site.Params.description }}" />
+  ...
+
+  {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint
+  "sha512" }}
+  <link
+    rel="stylesheet"
+    media="screen"
+    href="{{ $styles.Permalink }}"
+    integrity="{{ $styles.Data.Integrity }}"
+    media="screen"
+  />
+  ...
+</head>
+```
+
+---
+
+<b>Beispiel Hugo Auszug single.html: </b>
+
+```html
+{{ define "main" }}
+<div>
+  <h1>{{ .Title }}</h1>
+</div>
+<main>{{ .Content }}</main>
+{{ end }}
+```
+
+---
+
+## statische Assets
+
+- werden meistens in einem eigenen Ordner abgelegt
+- meistens Bilder, Fonts, CSS, Javascript, ...
+- meist durch absolute Pfade in Template und Inhalt nutzbar
+- Perprocessing durch SSG oft moeglich
+
+---
+
 ## Deployen
 
-Netlify, Vercel, Pages, nginx
-
-CI und git
+- relativ einfach da statisch
+- meistens CDN, normale Webserver gehen auch
+- last nicht gross, da keine Runtime
+- viele Anbieter mit integrierter CI, ansonsten CI selbst bauen
+- Triggering ueber Webhooks
 
 ---
 
@@ -380,6 +447,7 @@ CI und git
   - [REST API Handbook | WordPress Developer Resources](https://developer.wordpress.org/rest-api/)
 - Medium
 - etc.\
+- Converter
 
 ---
 
@@ -388,6 +456,14 @@ CI und git
 ## Hydration
 
 [Achieving lazy hydration in Vue 3 from scratch - LogRocket Blog](https://blog.logrocket.com/vue-3-lazy-hydration-from-scratch/)
+
+**Problem:** Wir haben jetzt unsere Seite, aber wir brauchen dynamische Inhalte, wollen dabei aber schnell und durchsuchbar Content fuer alle Content liefern.
+
+**Loesung:** Wir haengen uns in bestimmte Elemente der Seite nach dem Laden ein und fuellen sie mit unseren interaktiven Inhalte. --> Hydration
+
+**Partial Hydration**: Nur einzelne Teile einer Seite werden hydriert, und damit separiert
+
+**Lazy Hydration**: Partial aber mit Entscheidung wann etwas hydriert wird
 
 ---
 
@@ -399,9 +475,11 @@ CI und git
 
 ## Hybride CMS
 
-Moeglichkeiten der SSG wie etwa Grav oder Kirby
-
-static HTML CMS wie NEOS
+- gut fuer den Einstieg
+- oder um alles an einer Stelle zu haben
+- verschiedene Systeme implementieren das bereits
+- Bspw. Kirby, Grav, Wordpress, ... haben Plugins
+- NEOS setzt komplett auf diese Methode
 
 ---
 
