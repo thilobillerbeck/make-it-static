@@ -45,15 +45,15 @@ Master Informatik Student TU Darmstadt
 - [https://t3n.de/news/woocommerce-sicherheitsluecke-wordpress-shopping-plugin-1392208/](https://t3n.de/news/woocommerce-sicherheitsluecke-wordpress-shopping-plugin-1392208/)
 - [https://www.heise.de/news/Drupal-Team-beseitigt-potenziell-gefaehrliche-Sicherheitsluecke-aus-dem-CMS-6145534.html](https://www.heise.de/news/Drupal-Team-beseitigt-potenziell-gefaehrliche-Sicherheitsluecke-aus-dem-CMS-6145534.html)
 -->
-<div class="w-screen h-screen">
-  <img src="/cms-security-risks/article-1.png" class="absolute top-0 left-0 m-40 h-40 rounded" />
-  <img src="/cms-security-risks/article-2.png" class="absolute top-24 left-24 m-40 h-40 rounded" />
-  <img src="/cms-security-risks/article-3.png" class="absolute top-0 left-48 m-40 h-40 rounded" />
+<div class="height-screen width-screen relative">
+  <img src="/cms-security-risks/article-1.png" class="absolute top-0 left-0 m-40 h-40" />
+  <img src="/cms-security-risks/article-2.png" class="absolute top-24 left-24 m-40 h-40" />
+  <img src="/cms-security-risks/article-3.png" class="absolute top-0 left-48 m-40 h-40" />
 </div>
 
 ---
 
-## Generell Backends und Sicherheitsluecken
+## <noto-control-knobs /> Backends und Sicherheitsluecken
 
 <noto-hammer-and-wrench /> **Die Fertigloesungen**
 
@@ -71,33 +71,35 @@ Master Informatik Student TU Darmstadt
 
 ---
 
-## CMS und Wartungsaufwand
+## <noto-newspaper /> CMS und Wartungsaufwand
 
-Wartung und Sicherheitsupdates
+<noto-wrench /> **Wartung und Sicherheitsupdates**
 
 - Staendige und zeitnahe Updates um Sicherheitsluecken zu schliessen
 - Wartung des Hostsystems notwendig
 
-Feature Breaking und Portierung
+<noto-fire-extinguisher />**Feature Breaking und Portierung**
 
 - Updates koennen Features brechen
 - Aufwand der Portierung auf neue Version
 
-Plugin Hoelle
+<noto-exploding-head />**Plugin Hoelle**
 
 - Viele Plugins erzeugen viele Abhaenigkeiten
 - Wenn ein Plugin bricht, bricht vieles mit
+
+<div class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Dieser Zustand verschlimmert sich in der Regel mit dem Alter der Seite <noto-red-exclamation-mark /></b></div>
 
 ---
 
 ## Skalierungsprobleme
 
-Webserver und Runtime
+**Webserver und Runtime**
 
 - skalieren meistens noch recht gut
 - Last kann je nach Komplexitaet spuerbar werden
 
-Datenbank
+**Datenbank**
 
 - schwer skalierbar
 - Last kann auch hier zum Problem werden
@@ -105,36 +107,57 @@ Datenbank
 <div class="text-center mt-8"><b><noto-red-exclamation-mark /> Grosse Last fuehrt zu Unnereichbarkeit der Seite <noto-red-exclamation-mark /></b></div>
 
 ---
+layout: center
+---
+
+<h1><noto-sparkles /> Static Sites to the rescue! <noto-sparkles /></h1>
+<p class="text-center">Nein, natuerlich nicht, aber sie loesen einige Probleme.</p>
+
+---
 
 ## statische Seiten
 
+<p class="text-yellow-200 font-bold text-center">
 tl:dr; Webseiten ohne das klassische CMS Backend bzw. serverseitige Generierung
+</p>
 
-- Bestandteile HTML, CSS, JS
-- HTML und JS fuer vorab generierten Inhalt
-- JS fuer dynamische Inhalte (bspw. von einer API)
-- kein serverseitiges Scripting
+<div class="flex flex-col">
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">HTML</div><div class="text-sm text-gray-300">Gibt Struktur und Inhalt vor</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">CSS</div><div class="text-sm text-gray-300">Bestimmt das Aussehen der Seite</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Javascript und co.</div><div class="text-sm text-gray-300">Fuegt <b>dynamische</b> Elemente zur Seite hinzu</div></div>
+</div>
+
+<div class="text-center mt-8"><b><noto-red-exclamation-mark /> Keine serverseitige Generierung <noto-red-exclamation-mark /></b></div>
 
 ---
 
 ## Static Site Generatoren - Was ist das?
 
-tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert.
+<p class="text-yellow-200 font-bold text-center">
+tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
+</p>
 
+- Quasi der Werkzeugkasten der statischen Seite
 - Strikte Trennung von Inhalt und Template/Frontend
-- Seiten werden bereits zur Bereitstellung anstatt zur Auslieferung generiert
-- Verschmilzt Templates und Inhalt zu einer Seite
+- Generierung bei Deployment, nicht erst bei Aufruf
+- Templates und Inhalt werden "verschmolzen"
 - Generierung von Metadaten
-- Meist auch zustaendig fuer das Bundlen von CSS und co.
+- Zusaetzliche Features
+  - JS / CSS Bundling
+  - Hashgenerierung
+  - Bildverarbeitung
+  - ...
 
 ---
 
-## Bekannte Seiten die mit SSGs gebaut wurden
+## Beispiele fuer statische Seiten
 
-- [https://gohugo.io/showcase/letsencrypt/](https://gohugo.io/showcase/letsencrypt/)
-- [https://gohugo.io/showcase/1password-support/](https://gohugo.io/showcase/1password-support/)
-- [https://ionicframework.com/](https://ionicframework.com/)
-- [https://www.gatsbyjs.com/showcase/www.nationalgeographic.co.uk](https://www.gatsbyjs.com/showcase/www.nationalgeographic.co.uk)
+<div class="grid grid-cols-[1fr,1fr] width-screen">
+  <img src="/example-sites/site-1.png" class="p-4" />
+  <img src="/example-sites/site-2.png" class="p-4" />
+  <img src="/example-sites/site-3.png" class="p-4" />
+  <img src="/example-sites/site-4.png" class="p-4" />
+</div>
 
 ---
 
@@ -287,7 +310,10 @@ layout: two-cols
 
 # Inhalte
 
-This shows on the right
+- Daten mit denen die Seite gefuellt werden soll
+- strukturiert und/oder semi strukturiert
+- meist verschiedene Formate und Quellen moeglich
+- Beispiel rechts: Inhalt darmstadt.ccc.de 
 
 </template>
 
@@ -320,7 +346,11 @@ Freifunk dein Projekt!
 
 # Inhalte aus Dateien
 
-This shows on the right
+- Hauptsaechlich Inhalt (hier Markdown)
+- Metadaten
+  - Allgemeins (Titel, Datum, ...)
+  - SSG spezifisches (Menueposition, Template, ...)
+  - eigenes wie etwa ein Headerbild (hier Hero)
 
 </template>
 
