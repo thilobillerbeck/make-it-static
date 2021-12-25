@@ -37,6 +37,12 @@ Master Informatik Student TU Darmstadt
 - <simple-icons-matrix /> @avocadoom:avocadoom.de
 
 ---
+layout: center
+---
+
+# Aktuelle Situation
+
+---
 
 ## CMS und Sicherheitsluecken
 
@@ -45,10 +51,10 @@ Master Informatik Student TU Darmstadt
 - [https://t3n.de/news/woocommerce-sicherheitsluecke-wordpress-shopping-plugin-1392208/](https://t3n.de/news/woocommerce-sicherheitsluecke-wordpress-shopping-plugin-1392208/)
 - [https://www.heise.de/news/Drupal-Team-beseitigt-potenziell-gefaehrliche-Sicherheitsluecke-aus-dem-CMS-6145534.html](https://www.heise.de/news/Drupal-Team-beseitigt-potenziell-gefaehrliche-Sicherheitsluecke-aus-dem-CMS-6145534.html)
 -->
-<div class="height-screen width-screen relative">
-  <img src="/cms-security-risks/article-1.png" class="absolute top-0 left-0 m-40 h-40" />
-  <img src="/cms-security-risks/article-2.png" class="absolute top-24 left-24 m-40 h-40" />
-  <img src="/cms-security-risks/article-3.png" class="absolute top-0 left-48 m-40 h-40" />
+<div class="grid grid-cols-[1fr,1fr]">
+  <img src="/cms-security-risks/article-1.png" class="p-4" />
+  <img src="/cms-security-risks/article-2.png" class="p-4" />
+  <img src="/cms-security-risks/article-3.png" class="p-4" />
 </div>
 
 ---
@@ -160,7 +166,8 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 </div>
 
 ---
-
+layout: center
+---
 ## Bekannte SSGs
 
 <div class="flex flex-wrap">
@@ -168,7 +175,6 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
   <img src="/ssg-logos/jekyll.png" class="m-12 h-12" />
   <img src="/ssg-logos/eleventy.png" class="m-12 h-12" />
   <img src="/ssg-logos/gatsby.png" class="m-12 h-12" />
-  <img src="/ssg-logos/nextjs.png" class="m-12 h-12" />
   <img src="/ssg-logos/astro.png" class="m-12 h-12" />
 </div>
 
