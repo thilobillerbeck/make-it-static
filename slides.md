@@ -44,7 +44,7 @@ layout: center
 
 ---
 
-## CMS und Sicherheitsluecken
+## CMS und Sicherheitslücken
 
 <!--
 - [https://t3n.de/news/wordpress-sicherheitsluecken-1356976/](https://t3n.de/news/wordpress-sicherheitsluecken-1356976/)
@@ -59,21 +59,21 @@ layout: center
 
 ---
 
-## <noto-control-knobs /> Backends und Sicherheitsluecken
+## <noto-control-knobs /> Backends und Sicherheitslücken
 
-<noto-hammer-and-wrench /> **Die Fertigloesungen**
+<noto-hammer-and-wrench /> **Die Fertiglösungen**
 
-- Brauchen regelmaessige Pflege und Updates
-- Benoetigen ein sauberes und sicheres Setup
-- Was tun wenn die Loesung nicht mehr maintained wird?
+- Brauchen regelmässige Pflege und Updates
+- Benötigen ein sauberes und sicheres Setup
+- Was tun wenn die Lösung nicht mehr maintained wird?
 
 <noto-adhesive-bandage /> **Die Eigenbauten**
 
-- Aehnliche Probleme wie bei der Fertigloesung
-- Alle Probleme muessen bedacht und abgedeckt werden
-- Anfaelligkeit fuer die Breach-Klassiker (SQL-Injection, XSS, ...)
+- ähnliche Probleme wie bei der Fertiglösung
+- Alle Probleme müssen bedacht und abgedeckt werden
+- Anfälligkeit für die Breach-Klassiker (SQL-Injection, XSS, ...)
 
-<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> EInmal im System kann ein Angreifer die ganze Seite uebernehmen <noto-red-exclamation-mark /></b></p>
+<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> EInmal im System kann ein Angreifer die ganze Seite übernehmen <noto-red-exclamation-mark /></b></p>
 
 ---
 
@@ -81,17 +81,17 @@ layout: center
 
 <noto-wrench /> **Wartung und Sicherheitsupdates**
 
-- Staendige und zeitnahe Updates um Sicherheitsluecken zu schliessen
+- Ständige und zeitnahe Updates um Sicherheitslücken zu schliessen
 - Wartung des Hostsystems notwendig
 
 <noto-fire-extinguisher />**Feature Breaking und Portierung**
 
-- Updates koennen Features brechen
-- Aufwand der Portierung auf neue Version
+- Updates können Features brechen
+- Aufwand der Portierung auf neü Version
 
-<noto-exploding-head />**Plugin Hoelle**
+<noto-exploding-head />**Plugin Hölle**
 
-- Viele Plugins erzeugen viele Abhaenigkeiten
+- Viele Plugins erzeugen viele Abhänigkeiten
 - Wenn ein Plugin bricht, bricht vieles mit
 
 <p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Dieser Zustand verschlimmert sich in der Regel mit dem Alter der Seite <noto-red-exclamation-mark /></b></p>
@@ -103,21 +103,21 @@ layout: center
 <noto-satellite-antenna /> **Webserver und Runtime**
 
 - skalieren meistens noch recht gut
-- Last kann je nach Komplexitaet spuerbar werden
+- Last kann je nach Komplexität spürbar werden
 
 <noto-file-cabinet /> **Datenbank**
 
 - schwer skalierbar
 - Last kann auch hier zum Problem werden
 
-<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Grosse Last fuehrt zu Unnereichbarkeit der Seite <noto-red-exclamation-mark /></b></p>
+<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Grosse Last führt zu Unnereichbarkeit der Seite <noto-red-exclamation-mark /></b></p>
 
 ---
 layout: center
 ---
 
-<h1><noto-sparkles /> Static Sites to the rescue! <noto-sparkles /></h1>
-<p class="text-center">Nein, natuerlich nicht, aber sie loesen einige Probleme.</p>
+<h1><noto-sparkles /> Static Sites to the rescü! <noto-sparkles /></h1>
+<p class="text-center">Nein, natürlich nicht, aber sie lösen einige Probleme.</p>
 
 ---
 
@@ -130,7 +130,7 @@ tl:dr; Webseiten ohne das klassische CMS Backend bzw. serverseitige Generierung
 <div class="flex flex-col">
 <div class="p-4 border border-gray-500 m-2"><div class="font-bold">HTML</div><div class="text-sm text-gray-300">Gibt Struktur und Inhalt vor</div></div>
 <div class="p-4 border border-gray-500 m-2"><div class="font-bold">CSS</div><div class="text-sm text-gray-300">Bestimmt das Aussehen der Seite</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Javascript und co.</div><div class="text-sm text-gray-300">Fuegt <b>dynamische</b> Elemente zur Seite hinzu</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Javascript und co.</div><div class="text-sm text-gray-300">Fügt <b>dynamische</b> Elemente zur Seite hinzu</div></div>
 </div>
 
 <div class="text-center mt-8"><b><noto-red-exclamation-mark /> Keine serverseitige Generierung <noto-red-exclamation-mark /></b></div>
@@ -148,7 +148,7 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 - Generierung bei Deployment, nicht erst bei Aufruf
 - Templates und Inhalt werden "verschmolzen"
 - Generierung von Metadaten
-- Zusaetzliche Features
+- Zusätzliche Features
   - JS / CSS Bundling
   - Hashgenerierung
   - Bildverarbeitung
@@ -156,7 +156,7 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 
 ---
 
-## Beispiele fuer statische Seiten
+## Beispiele für statische Seiten
 
 <div class="grid grid-cols-[1fr,1fr] width-screen">
   <img src="/example-sites/site-1.png" class="p-4" />
@@ -250,7 +250,7 @@ Themes (meistens separates Repo)
 <mdi:folder/> layouts
 </div>
 <div class="w-full p-2">
-Layouts (ueberschreiben Themes)
+Layouts (überschreiben Themes)
 </div>
 
 </div>
@@ -283,9 +283,9 @@ layout: two-cols
 
 # Inhalte
 
-- Daten mit denen die Seite gefuellt werden soll
+- Daten mit denen die Seite gefüllt werden soll
 - strukturiert und/oder semi strukturiert
-- meist verschiedene Formate und Quellen moeglich
+- meist verschiedene Formate und Qüllen möglich
 - Beispiel rechts: Inhalt darmstadt.ccc.de 
 
 </template>
@@ -294,10 +294,10 @@ layout: two-cols
 
 ## Inhalte aus unstrukturierten Dateien
 
-- Hauptsaechlich Inhalt (hier Markdown)
+- Hauptsächlich Inhalt (hier Markdown)
 - Metadaten
   - Allgemeins (Titel, Datum, ...)
-  - SSG spezifisches (Menueposition, Template, ...)
+  - SSG spezifisches (Menüposition, Template, ...)
   - eigenes wie etwa ein Headerbild (hier Hero)
 
 
@@ -328,8 +328,8 @@ layout: two-cols
 ## strukturierte Daten aus Dateien
 
 - CSV, JSON, YAML, TOML
-- eignet sich gut fuer Datensaetze
-- Layouting ueber Template
+- eignet sich gut für Datensätze
+- Layouting über Template
 - Vermeidet Inkonsistenz
 
 </template>
@@ -340,7 +340,7 @@ layout: two-cols
 - Daten werden beim Rendering aus API abgerufen
 - bspw. gut mit Headless CMS oder bestehendem CMS
 - REST / GraphQL
-- Layouting ueber Template
+- Layouting über Template
 - Vermeidet Inkonsistenz
 
 </template>
@@ -362,10 +362,10 @@ layout: two-cols
 
 ## Themes
 
-- Grundgeruest der Seite.Sc
+- Grundgerüst der Seite.Sc
 - Besteht meistens aus einerm Basistempalte
-- Template wird befuellt mit Bloecken
-- Typische Aufteilung in 3 Bloekce (Header, Main, Foter)
+- Template wird befüllt mit Blöcken
+- Typische Aufteilung in 3 Blökce (Header, Main, Foter)
 
 <b class="text-red-300">Header: </b>Metadaten, CSS, JS, Icons, ...
 
@@ -441,7 +441,7 @@ layout: two-cols
 - werden meistens in einem eigenen Ordner abgelegt
 - meistens Bilder, Fonts, CSS, Javascript, ...
 - meist durch absolute Pfade in Template und Inhalt nutzbar
-- Perprocessing durch SSG oft moeglich
+- Perprocessing durch SSG oft möglich
 
 ---
 
@@ -450,8 +450,8 @@ layout: two-cols
 - relativ einfach da statisch
 - meistens CDN, normale Webserver gehen auch
 - last nicht gross, da keine Runtime
-- viele Anbieter mit integrierter CI, ansonsten CI selbst bauen
-- Triggering ueber Webhooks
+- viele Anbieter mit integrierter CI, ansonsten CI selbst baün
+- Triggering über Webhooks
 
 ---
 
@@ -461,17 +461,17 @@ layout: two-cols
 
 - Seite gerendert -> kein Zugriff aufs Backend
 - Wenn die Seite einmal online ist, braucht sie keine Updates da kein Rendering
-- lediglich Backend benoetigt Wartung
+- lediglich Backend benötigt Wartung
 
 **Feature Breaking und Portierung**
 
-- Inhalte ueber Standards
+- Inhalte über Standards
 - Durch Standards in der Generierung Portierung sehr einfach
 
-**Plugin Hoelle**
+**Plugin Hölle**
 
-- Plugins werden meist nicht benoetigt
-- koennen relativ gekapselt voneinander verwendet werden
+- Plugins werden meist nicht benötigt
+- können relativ gekapselt voneinander verwendet werden
 
 ---
 
@@ -503,11 +503,11 @@ layout: two-cols
 
 ## Hydration
 
-[Achieving lazy hydration in Vue 3 from scratch - LogRocket Blog](https://blog.logrocket.com/vue-3-lazy-hydration-from-scratch/)
+<!-- [Achieving lazy hydration in Vue 3 from scratch - LogRocket Blog](https://blog.logrocket.com/vue-3-lazy-hydration-from-scratch/) -->
 
-**Problem:** Wir haben jetzt unsere Seite, aber wir brauchen dynamische Inhalte, wollen dabei aber schnell und durchsuchbar Content fuer alle Content liefern.
+**Problem:** Wir haben jetzt unsere Seite, aber wir brauchen dynamische Inhalte, wollen dabei aber schnell und durchsuchbar Content für alle liefern.
 
-**Loesung:** Wir haengen uns in bestimmte Elemente der Seite nach dem Laden ein und fuellen sie mit unseren interaktiven Inhalte. --> Hydration
+**Lösung:** Wir hängen uns in bestimmte Elemente der Seite nach dem Laden ein und füllen sie mit unseren interaktiven Inhalte. --> Hydration
 
 **Partial Hydration**: Nur einzelne Teile einer Seite werden hydriert, und damit separiert
 
@@ -522,16 +522,16 @@ layout: two-cols
 -->
 
 - viele SSGs bieten alternative Rendering Optionen
-- ermoeglicht Flexibilitaet
+- ermöglicht Flexibilität
 - birgt aber auch Downsides
 - Seiten bei Aufruf generiert
-- So lange im Cache bis sich der Content aendert
+- So lange im Cache bis sich der Content ändert
 
 ---
 
 ## Hybride CMS
 
-- gut fuer den Einstieg
+- gut für den Einstieg
 - oder um alles an einer Stelle zu haben
 - verschiedene Systeme implementieren das bereits
 - Bspw. Kirby, Grav, Wordpress, ... haben Plugins
@@ -542,8 +542,8 @@ layout: two-cols
 # Fazit
 
 - Sind SSGs die Antwort auf alles?
-- Nein, aber sie loesen viele Probleme
-- hohe Flexibilitaet
+- Nein, aber sie lösen viele Probleme
+- hohe Flexibilität
 - geringer Wartungsaufwand
 - hohe Geschwindigkeit
 
