@@ -439,7 +439,7 @@ layout: two-cols
 
 ---
 
-## Deployen
+## Deployment
 
 - relativ einfach da statisch
 - meistens CDN, normale Webserver gehen auch
@@ -509,9 +509,17 @@ layout: two-cols
 
 ---
 
-## Partial Server Side Rendering
+## DSG (Defered Site Generation)
 
+<!-- >
 [Server Side Rendering (SSR) vs. Client Side Rendering (CSR) vs. Pre-Rendering using Static Site Generators (SSG) and client-side hydration. | by Prashant Ram | Oct, 2021 | Medium](https://medium.com/@prashantramnyc/server-side-rendering-ssr-vs-client-side-rendering-csr-vs-pre-rendering-using-static-site-89f2d05182ef)
+-->
+
+- viele SSGs bieten alternative Rendering Optionen
+- ermoeglicht Flexibilitaet
+- birgt aber auch Downsides
+- Seiten bei Aufruf generiert
+- So lange im Cache bis sich der Content aendert
 
 ---
 
@@ -526,6 +534,12 @@ layout: two-cols
 ---
 
 # Fazit
+
+- Sind SSGs die Antwort auf alles?
+- Nein, aber sie loesen viele Probleme
+- hohe Flexibilitaet
+- geringer Wartungsaufwand
+- hohe Geschwindigkeit
 
 ---
 layout: center
