@@ -67,7 +67,7 @@ Master Informatik Student TU Darmstadt
 - Alle Probleme muessen bedacht und abgedeckt werden
 - Anfaelligkeit fuer die Breach-Klassiker (SQL-Injection, XSS, ...)
 
-<div class="text-center mt-8"><b><noto-red-exclamation-mark /> EInmal im System kann ein Angreifer die ganze Seite uebernehmen <noto-red-exclamation-mark /></b></div>
+<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> EInmal im System kann ein Angreifer die ganze Seite uebernehmen <noto-red-exclamation-mark /></b></p>
 
 ---
 
@@ -88,23 +88,23 @@ Master Informatik Student TU Darmstadt
 - Viele Plugins erzeugen viele Abhaenigkeiten
 - Wenn ein Plugin bricht, bricht vieles mit
 
-<div class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Dieser Zustand verschlimmert sich in der Regel mit dem Alter der Seite <noto-red-exclamation-mark /></b></div>
+<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Dieser Zustand verschlimmert sich in der Regel mit dem Alter der Seite <noto-red-exclamation-mark /></b></p>
 
 ---
 
 ## Skalierungsprobleme
 
-**Webserver und Runtime**
+<noto-satellite-antenna /> **Webserver und Runtime**
 
 - skalieren meistens noch recht gut
 - Last kann je nach Komplexitaet spuerbar werden
 
-**Datenbank**
+<noto-file-cabinet /> **Datenbank**
 
 - schwer skalierbar
 - Last kann auch hier zum Problem werden
 
-<div class="text-center mt-8"><b><noto-red-exclamation-mark /> Grosse Last fuehrt zu Unnereichbarkeit der Seite <noto-red-exclamation-mark /></b></div>
+<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Grosse Last fuehrt zu Unnereichbarkeit der Seite <noto-red-exclamation-mark /></b></p>
 
 ---
 layout: center
@@ -161,40 +161,6 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 
 ---
 
-## Vergleich CMS und Wartungsaufwand
-
-**Wartung und Sicherheitsupdates**
-
-- Seite gerendert -> kein Zugriff aufs Backend
-- Wenn die Seite einmal online ist, braucht sie keine Updates da kein Rendering
-- lediglich Backend benoetigt Wartung
-
-**Feature Breaking und Portierung**
-
-- Inhalte ueber Standards
-- Durch Standards in der Generierung Portierung sehr einfach
-
-**Plugin Hoelle**
-
-- Plugins werden meist nicht benoetigt
-- koennen relativ gekapselt voneinander verwendet werden
-
----
-
-## Skalierungsprobleme
-
-**Webserver und Runtime**
-
-- Webserver / CDN als einzige Limitation
-- ausrollen sehr einfach
-
-**Datenbank**
-
-- Auch hier APIs als limitierender Faktor
-  - Selbst wenn die Last gross ist, kann bereits Content an den Nutzer ausgeliefert werden (s. Hydration)
-
----
-
 ## Bekannte SSGs
 
 <div class="flex flex-wrap">
@@ -207,7 +173,8 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 </div>
 
 ---
-
+layout: center
+---
 # Wie funktionieren SSGs?
 
 ---
@@ -235,7 +202,7 @@ layout: center
 layout: center
 ---
 
-<h2 class="text-center">Ordnerstruktur Hugo</h2>
+<h2 class="text-center pb-4">Ordnerstruktur Hugo</h2>
 
 <div class="grid grid-cols-[1fr,3fr] width-screen">
 <div class="font-bold bg-gray-800 p-2">
@@ -318,10 +285,15 @@ layout: two-cols
 </template>
 
 ---
-layout: two-cols
----
 
-<template v-slot:default>
+## Inhalte aus unstrukturierten Dateien
+
+- Hauptsaechlich Inhalt (hier Markdown)
+- Metadaten
+  - Allgemeins (Titel, Datum, ...)
+  - SSG spezifisches (Menueposition, Template, ...)
+  - eigenes wie etwa ein Headerbild (hier Hero)
+
 
 ```markdown
 ---
@@ -341,25 +313,31 @@ schon immer gefragt hast, warum es hier kein öffentliches WLAN gibt, dann ist
 Freifunk dein Projekt!
 ```
 
+---
+layout: two-cols
+---
+
+<template v-slot:default>
+
+## strukturierte Daten aus Dateien
+
+- CSV, JSON, YAML, TOML
+- eignet sich gut fuer Datensaetze
+- Layouting ueber Template
+- Vermeidet Inkonsistenz
+
 </template>
 <template v-slot:right>
 
-# Inhalte aus Dateien
+## strukturierte Daten aus APIs
 
-- Hauptsaechlich Inhalt (hier Markdown)
-- Metadaten
-  - Allgemeins (Titel, Datum, ...)
-  - SSG spezifisches (Menueposition, Template, ...)
-  - eigenes wie etwa ein Headerbild (hier Hero)
+- Daten werden beim Rendering aus API abgerufen
+- bspw. gut mit Headless CMS oder bestehendem CMS
+- REST / GraphQL
+- Layouting ueber Template
+- Vermeidet Inkonsistenz
 
 </template>
-
----
-
-# Weitere Moelgichkeiten
-
-Inhalte aus APIS
-INhalte aus strukturierten Daten
 
 ---
 layout: two-cols
@@ -468,6 +446,40 @@ layout: two-cols
 - last nicht gross, da keine Runtime
 - viele Anbieter mit integrierter CI, ansonsten CI selbst bauen
 - Triggering ueber Webhooks
+
+---
+
+## Vergleich CMS und Wartungsaufwand
+
+**Wartung und Sicherheitsupdates**
+
+- Seite gerendert -> kein Zugriff aufs Backend
+- Wenn die Seite einmal online ist, braucht sie keine Updates da kein Rendering
+- lediglich Backend benoetigt Wartung
+
+**Feature Breaking und Portierung**
+
+- Inhalte ueber Standards
+- Durch Standards in der Generierung Portierung sehr einfach
+
+**Plugin Hoelle**
+
+- Plugins werden meist nicht benoetigt
+- koennen relativ gekapselt voneinander verwendet werden
+
+---
+
+## Skalierungsprobleme
+
+**Webserver und Runtime**
+
+- Webserver / CDN als einzige Limitation
+- ausrollen sehr einfach
+
+**Datenbank**
+
+- Auch hier APIs als limitierender Faktor
+  - Selbst wenn die Last gross ist, kann bereits Content an den Nutzer ausgeliefert werden (s. Hydration)
 
 ---
 
