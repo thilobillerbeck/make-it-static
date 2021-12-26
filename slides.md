@@ -6,13 +6,17 @@ class: "text-center"
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
-lineNumbers: false
+lineNumbers: true
 # some information about the slides, markdown enabled
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  # Make it static!
+  **Ein Einsteiger-Talk über statische Webseiten, wie man sie erstellt oder auf diese umstellt und dabei seinen bisherigen Workflow beibehält und welche Vor- und Nachteile diese mit sich bringen.**
 
-  Learn more at [Sli.dev](https://sli.dev)
+  "Statische Webseiten, das hat man doch nur zu den Geburtszeiten des Internets benutzt.". Naja, nicht ganz, mittlerweile geht der Trend wieder vom klassischen Backend mit dynamischer Seitengenerierung zurück zu statischen Seiten. Ganz getreu dem Motto "Back to Basics" geht es in diesem Vortrag genau um dieses Thema: "Was sind statisch generierte Webseiten? Und was fange ich damit an?"
+
+  Eine eigene Internetpräsenz zu haben ist mittlerweile keine Seltenheit mehr und wir Wesen beziehen mittlerweile einen Großteil unserer Informationen dorther. Dabei besteht die große Menge dieser Informationsquellen aus Seiten mit einem Backend, welches diese dynamisch generiert. Was auf den ersten Blick unproblematisch klingt kann gerade im Hinblick auf Wartung und Auslastung ein Problem werden. Mit Sicherheit hast du auch schon von Webseiten gehoert, die aufgrund eines veralteten CMS gekapert wurden. Aber muss das wirlich sein? Nein, denn mittlerweile ist das statische Generieren von Webseiten eine echte Alternative und nicht nur eine Sache, die Nerds vorbehalten ist. In diesem Talk erfährst du, was statische Seiten ausmacht, welche Ansätze du wählen kannst, um sie mit Inhalten zu füllen, und wie du trotzdem deinen bisherigen Workflow beibehalten kannst. Außerdem klären wir, was zur Hoelle Hydrierung mit Webseiten zu tun hat und wie du Datenverarbeitung mit einem Hybridansatz ermoeglichen kannst.
+
+
 # persist drawings in exports and build
 drawings:
   persist: false
@@ -22,8 +26,18 @@ layout: center
 # make-it-static
 
 ---
+class: "text-center"
+layout: center
+---
+
+# Slides
+https://make-it-static.thilo-billerbeck.com
+<img src="/qr.png" class="p-4" />
+
+
+---
 layout: image-right
-image: https://source.unsplash.com/1600x900/?beach
+image: me.jpg
 ---
 # Wer bin ich?
 
@@ -87,7 +101,7 @@ layout: center
 <noto-fire-extinguisher />**Feature Breaking und Portierung**
 
 - Updates können Features brechen
-- Aufwand der Portierung auf neü Version
+- Aufwand der Portierung auf neue Version
 
 <noto-exploding-head />**Plugin Hölle**
 
@@ -95,6 +109,7 @@ layout: center
 - Wenn ein Plugin bricht, bricht vieles mit
 
 <p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Dieser Zustand verschlimmert sich in der Regel mit dem Alter der Seite <noto-red-exclamation-mark /></b></p>
+
 
 ---
 
@@ -110,13 +125,13 @@ layout: center
 - schwer skalierbar
 - Last kann auch hier zum Problem werden
 
-<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Grosse Last führt zu Unnereichbarkeit der Seite <noto-red-exclamation-mark /></b></p>
+<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Grosse Last führt zu Unerreichbarkeit der Seite <noto-red-exclamation-mark /></b></p>
 
 ---
 layout: center
 ---
 
-<h1><noto-sparkles /> Static Sites to the rescü! <noto-sparkles /></h1>
+<h1><noto-sparkles /> Static Sites to the rescue! <noto-sparkles /></h1>
 <p class="text-center">Nein, natürlich nicht, aber sie lösen einige Probleme.</p>
 
 ---
@@ -362,10 +377,10 @@ layout: two-cols
 
 ## Themes
 
-- Grundgerüst der Seite.Sc
+- Grundgerüst der Seite
 - Besteht meistens aus einerm Basistempalte
 - Template wird befüllt mit Blöcken
-- Typische Aufteilung in 3 Blökce (Header, Main, Foter)
+- Typische Aufteilung in 3 Blöcke (Header, Main, Foter)
 
 <b class="text-red-300">Header: </b>Metadaten, CSS, JS, Icons, ...
 
@@ -441,7 +456,7 @@ layout: two-cols
 - werden meistens in einem eigenen Ordner abgelegt
 - meistens Bilder, Fonts, CSS, Javascript, ...
 - meist durch absolute Pfade in Template und Inhalt nutzbar
-- Perprocessing durch SSG oft möglich
+- Preprocessing durch SSG oft möglich
 
 ---
 
@@ -449,7 +464,7 @@ layout: two-cols
 
 - relativ einfach da statisch
 - meistens CDN, normale Webserver gehen auch
-- last nicht gross, da keine Runtime
+- Last gering, da keine Runtime
 - viele Anbieter mit integrierter CI, ansonsten CI selbst baün
 - Triggering über Webhooks
 
