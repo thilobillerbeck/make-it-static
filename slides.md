@@ -1,13 +1,9 @@
 ---
-# try also 'default' to start simple
 theme: apple-basic
-# apply any windi css classes to the current slide
 class: "text-center"
-# https://sli.dev/custom/highlighters.html
 highlighter: shiki
-# show line numbers in code blocks
+download: true
 lineNumbers: true
-# some information about the slides, markdown enabled
 info: |
   # Make it static!
   **Ein Einsteiger-Talk über statische Webseiten, wie man sie erstellt oder auf diese umstellt und dabei seinen bisherigen Workflow beibehält und welche Vor- und Nachteile diese mit sich bringen.**
@@ -15,9 +11,6 @@ info: |
   "Statische Webseiten, das hat man doch nur zu den Geburtszeiten des Internets benutzt.". Naja, nicht ganz, mittlerweile geht der Trend wieder vom klassischen Backend mit dynamischer Seitengenerierung zurück zu statischen Seiten. Ganz getreu dem Motto "Back to Basics" geht es in diesem Vortrag genau um dieses Thema: "Was sind statisch generierte Webseiten? Und was fange ich damit an?"
 
   Eine eigene Internetpräsenz zu haben ist mittlerweile keine Seltenheit mehr und wir Wesen beziehen mittlerweile einen Großteil unserer Informationen dorther. Dabei besteht die große Menge dieser Informationsquellen aus Seiten mit einem Backend, welches diese dynamisch generiert. Was auf den ersten Blick unproblematisch klingt kann gerade im Hinblick auf Wartung und Auslastung ein Problem werden. Mit Sicherheit hast du auch schon von Webseiten gehoert, die aufgrund eines veralteten CMS gekapert wurden. Aber muss das wirlich sein? Nein, denn mittlerweile ist das statische Generieren von Webseiten eine echte Alternative und nicht nur eine Sache, die Nerds vorbehalten ist. In diesem Talk erfährst du, was statische Seiten ausmacht, welche Ansätze du wählen kannst, um sie mit Inhalten zu füllen, und wie du trotzdem deinen bisherigen Workflow beibehalten kannst. Außerdem klären wir, was zur Hoelle Hydrierung mit Webseiten zu tun hat und wie du Datenverarbeitung mit einem Hybridansatz ermoeglichen kannst.
-
-
-# persist drawings in exports and build
 drawings:
   persist: false
 layout: center
