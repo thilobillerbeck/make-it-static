@@ -32,7 +32,7 @@ layout: center
 
 # Slides
 https://make-it-static.thilo-billerbeck.com
-<img src="/qr.png" class="p-4" />
+<img src="/qr.png" class="p-4" alt="https://make-it-static.thilo-billerbeck.com" />
 
 
 ---
@@ -66,9 +66,9 @@ layout: center
 - [https://www.heise.de/news/Drupal-Team-beseitigt-potenziell-gefaehrliche-Sicherheitsluecke-aus-dem-CMS-6145534.html](https://www.heise.de/news/Drupal-Team-beseitigt-potenziell-gefaehrliche-Sicherheitsluecke-aus-dem-CMS-6145534.html)
 -->
 <div class="grid grid-cols-[1fr,1fr]">
-  <img src="/cms-security-risks/article-1.png" class="p-4" />
-  <img src="/cms-security-risks/article-2.png" class="p-4" />
-  <img src="/cms-security-risks/article-3.png" class="p-4" />
+  <img src="/cms-security-risks/article-1.png" class="p-4" alt="Artikel: Drupal Team beseitigt potenziell gefaehrliche Sicherheitsluecke aus dem CMS." />
+  <img src="/cms-security-risks/article-2.png" class="p-4" alt="Artikel: Schwere Sicherheitsluecke in Woocommerce: Shopbetreiber sollten dringend updaten." />
+  <img src="/cms-security-risks/article-3.png" class="p-4" alt="Artikel: Wordpress: Sicherheitsluecken in beliebtem Plugin betreffen 1 Million Websites" />
 </div>
 
 ---
@@ -87,7 +87,7 @@ layout: center
 - Alle Probleme müssen bedacht und abgedeckt werden
 - Anfälligkeit für die Breach-Klassiker (SQL-Injection, XSS, ...)
 
-<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> EInmal im System kann ein Angreifer die ganze Seite übernehmen <noto-red-exclamation-mark /></b></p>
+<p class="text-center mt-8 text-red-300 light:text-red-600"><b><noto-red-exclamation-mark /> EInmal im System kann ein Angreifer die ganze Seite übernehmen <noto-red-exclamation-mark /></b></p>
 
 ---
 
@@ -108,7 +108,7 @@ layout: center
 - Viele Plugins erzeugen viele Abhänigkeiten
 - Wenn ein Plugin bricht, bricht vieles mit
 
-<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Dieser Zustand verschlimmert sich in der Regel mit dem Alter der Seite <noto-red-exclamation-mark /></b></p>
+<p class="text-center mt-8 text-red-300 light:text-red-600"><b><noto-red-exclamation-mark /> Dieser Zustand verschlimmert sich in der Regel mit dem Alter der Seite <noto-red-exclamation-mark /></b></p>
 
 
 ---
@@ -125,7 +125,7 @@ layout: center
 - schwer skalierbar
 - Last kann auch hier zum Problem werden
 
-<p class="text-center mt-8 text-red-300"><b><noto-red-exclamation-mark /> Grosse Last führt zu Unerreichbarkeit der Seite <noto-red-exclamation-mark /></b></p>
+<p class="text-center mt-8 text-red-300 light:text-red-600"><b><noto-red-exclamation-mark /> Grosse Last führt zu Unerreichbarkeit der Seite <noto-red-exclamation-mark /></b></p>
 
 ---
 layout: center
@@ -138,14 +138,14 @@ layout: center
 
 ## statische Seiten
 
-<p class="text-yellow-200 font-bold text-center">
+<p class="text-yellow-200 light:text-yellow-500 font-bold text-center">
 tl:dr; Webseiten ohne das klassische CMS Backend bzw. serverseitige Generierung
 </p>
 
 <div class="flex flex-col">
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">HTML</div><div class="text-sm text-gray-300">Gibt Struktur und Inhalt vor</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">CSS</div><div class="text-sm text-gray-300">Bestimmt das Aussehen der Seite</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Javascript und co.</div><div class="text-sm text-gray-300">Fügt <b>dynamische</b> Elemente zur Seite hinzu</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">HTML</div><div class="text-sm text-gray-300 light:text-gray-500">Gibt Struktur und Inhalt vor</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">CSS</div><div class="text-sm text-gray-300 light:text-gray-500">Bestimmt das Aussehen der Seite</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Javascript und co.</div><div class="text-sm text-gray-300 light:text-gray-500">Fügt <b>dynamische</b> Elemente zur Seite hinzu</div></div>
 </div>
 
 <div class="text-center mt-8"><b><noto-red-exclamation-mark /> Keine serverseitige Generierung <noto-red-exclamation-mark /></b></div>
@@ -154,7 +154,7 @@ tl:dr; Webseiten ohne das klassische CMS Backend bzw. serverseitige Generierung
 
 ## Static Site Generatoren - Was ist das?
 
-<p class="text-yellow-200 font-bold text-center">
+<p class="text-yellow-200 light:text-yellow-500 font-bold text-center">
 tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 </p>
 
@@ -174,10 +174,10 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 ## Beispiele für statische Seiten
 
 <div class="grid grid-cols-[1fr,1fr] width-screen">
-  <img src="/example-sites/site-1.png" class="p-4" />
-  <img src="/example-sites/site-2.png" class="p-4" />
-  <img src="/example-sites/site-3.png" class="p-4" />
-  <img src="/example-sites/site-4.png" class="p-4" />
+  <img src="/example-sites/site-1.png" class="p-4" alt="Screenshot: National Geographic Website" />
+  <img src="/example-sites/site-2.png" class="p-4" alt="Screenshot: ionic Website" />
+  <img src="/example-sites/site-3.png" class="p-4" alt="Screenshot: 1Password Hilfe Website" />
+  <img src="/example-sites/site-4.png" class="p-4" alt="Screenshot: Let's Encrypt Website" />
 </div>
 
 ---
@@ -185,12 +185,12 @@ layout: center
 ---
 ## Bekannte SSGs
 
-<div class="flex flex-wrap">
-  <img src="/ssg-logos/hugo.png" class="m-12 h-12" />
-  <img src="/ssg-logos/jekyll.png" class="m-12 h-12" />
-  <img src="/ssg-logos/eleventy.png" class="m-12 h-12" />
-  <img src="/ssg-logos/gatsby.png" class="m-12 h-12" />
-  <img src="/ssg-logos/astro.png" class="m-12 h-12" />
+<div class="flex flex-wrap light:bg-gray-800 rounded ">
+  <img src="/ssg-logos/hugo.png" class="m-12 h-12" alt="Logo: Hugo" />
+  <img src="/ssg-logos/jekyll.png" class="m-12 h-12" alt="Logo: Jekyll" />
+  <img src="/ssg-logos/eleventy.png" class="m-12 h-12" alt="Logo: Eleventy" />
+  <img src="/ssg-logos/gatsby.png" class="m-12 h-12" alt="Logo: Gatsby" />
+  <img src="/ssg-logos/astro.png" class="m-12 h-12" alt="Logo: Astro" />
 </div>
 
 ---
@@ -202,7 +202,7 @@ layout: center
 
 # Beispiel: darmstadt.ccc.de
 
-![Local Image](/darmstadt-ccc-de.jpeg)
+![Screenshot: darmstadt.ccc.de](/darmstadt-ccc-de.jpeg)
 
 ---
 layout: center
@@ -212,10 +212,10 @@ layout: center
 <h2 class="text-center">Bausteine</h2>
 
 <div class="flex flex-col">
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Inhalten / Daten</div><div class="text-sm text-gray-300">Markdown, YAML, JSON, ...</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Templates und / oder Themes</div><div class="text-sm text-gray-300">HTML Templates, Partials, ...</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Konfiguration</div><div class="text-sm text-gray-300">Config Files (TOML, YAML, ...</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">statische Assets</div><div class="text-sm text-gray-300">Bilder, Fonts, Scripts, Styles, ...</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Inhalten / Daten</div><div class="text-sm text-gray-300 light:text-gray-500">Markdown, YAML, JSON, ...</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Templates und / oder Themes</div><div class="text-sm text-gray-300 light:text-gray-500">HTML Templates, Partials, ...</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Konfiguration</div><div class="text-sm text-gray-300 light:text-gray-500">Config Files (TOML, YAML, ...</div></div>
+<div class="p-4 border border-gray-500 m-2"><div class="font-bold">statische Assets</div><div class="text-sm text-gray-300 light:text-gray-500">Bilder, Fonts, Scripts, Styles, ...</div></div>
 </div>
 
 
@@ -226,42 +226,42 @@ layout: center
 <h2 class="text-center pb-4">Ordnerstruktur Hugo</h2>
 
 <div class="grid grid-cols-[1fr,3fr] width-screen">
-<div class="font-bold bg-gray-800 p-2">
+<div class="font-bold bg-gray-800 p-2 text-gray-100">
 <mdi:file/> config.toml
 </div>
 <div class="w-full p-2">
 Konfiguration
 </div>
 
-<div class="font-bold bg-gray-800 p-2">
+<div class="font-bold bg-gray-800 p-2 text-gray-100">
 <mdi:folder/> content
 </div>
 <div class="w-full p-2">
 semi- und unstrukturierte Inhalt der Seite bspw. in Markdown
 </div>
 
-<div class="font-bold bg-gray-800 p-2">
+<div class="font-bold bg-gray-800 p-2 text-gray-100">
 <mdi:folder/> data
 </div>
 <div class="w-full p-2">
 strukturierte Daten in YAML, JSON, TOML, ...
 </div>
 
-<div class="font-bold bg-gray-800 p-2">
+<div class="font-bold bg-gray-800 p-2 text-gray-100">
 <mdi:folder/> static
 </div>
 <div class="w-full p-2">
 statische Assets
 </div>
 
-<div class="font-bold bg-gray-800 p-2">
+<div class="font-bold bg-gray-800 p-2 text-gray-100">
 <mdi:folder/> themes
 </div>
 <div class="w-full p-2">
 Themes (meistens separates Repo)
 </div>
 
-<div class="font-bold bg-gray-800 p-2">
+<div class="font-bold bg-gray-800 p-2 text-gray-100">
 <mdi:folder/> layouts
 </div>
 <div class="w-full p-2">
