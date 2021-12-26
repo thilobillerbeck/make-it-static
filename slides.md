@@ -114,13 +114,7 @@ layout: center
 - Last kann je nach Komplexität spürbar werden
 
 <noto-file-cabinet /> **Datenbank**
-
-- schwer skalierbar
-- Last kann auch hier zum Problem werden
-
-<p class="text-center mt-8 text-red-300 light:text-red-600"><b><noto-red-exclamation-mark /> Grosse Last führt zu Unerreichbarkeit der Seite <noto-red-exclamation-mark /></b></p>
-
----
+<img src="/qr.png" class="p-4" alt="https://make-it-static.thilo-billerbeck.com" />
 layout: center
 ---
 
@@ -140,13 +134,7 @@ tl:dr; Webseiten ohne das klassische CMS Backend bzw. serverseitige Generierung
 <div class="p-4 border border-gray-500 m-2"><div class="font-bold">CSS</div><div class="text-sm text-gray-300 light:text-gray-500">Bestimmt das Aussehen der Seite</div></div>
 <div class="p-4 border border-gray-500 m-2"><div class="font-bold">Javascript und co.</div><div class="text-sm text-gray-300 light:text-gray-500">Fügt <b>dynamische</b> Elemente zur Seite hinzu</div></div>
 </div>
-
-<div class="text-center mt-8"><b><noto-red-exclamation-mark /> Keine serverseitige Generierung <noto-red-exclamation-mark /></b></div>
-
----
-
-## Static Site Generatoren - Was ist das?
-
+todo
 <p class="text-yellow-200 light:text-yellow-500 font-bold text-center">
 tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 </p>
@@ -384,12 +372,55 @@ layout: two-cols
 </template>
 
 ---
+layout: two-cols
+---
+
+<template v-slot:default>
+<div class="h-100 m-4 p-4 flex flex-col font-mono">
+<div class="p-2 text-gray-400 light:text-gray-600">{ extend "template42" }</div>
+<div class="p-2">{{ "<article>" }}</div>
+<div class="p-2">
+{{ "<h1>" }}
+<span class="bg-red-800 light:bg-red-200">Titelvariable</span>
+{{ "</h1>" }}
+</div>
+<div class="p-2">{{ "<div class='rc3-is-awesome'>" }}</div>
+
+<div class="p-2">
+<span class="bg-blue-800 light:bg-blue-200">Inhaltsvariable</span>
+</div>
+
+<div class="p-2">{{ "</div>" }}</div>
+<div class="p-2">{{ "</article>" }}</div>
+
+<div class="p-2 text-gray-400 light:text-gray-600">{ end }</div>
+
+</div>
+
+</template>
+<template v-slot:right>
 
 ## Templates
 
 - Bestimmen Aufbau der Seite
 - spezifiziert Content Rendering
 - meistens auch Einbindung der Assets und deren Verarbeitung
+
+</template>
+
+---
+
+<b>Beispiel Hugo Auszug single.html: </b>
+
+```html
+{{ define "main" }}
+<div>
+  <h1>{{ .Title }}</h1>
+</div>
+<main>{{ .Content }}</main>
+{{ end }}
+```
+
 
 <b>Beispiel Hugo baseof.html: </b>
 ```html
@@ -431,19 +462,6 @@ layout: two-cols
 
 ---
 
-<b>Beispiel Hugo Auszug single.html: </b>
-
-```html
-{{ define "main" }}
-<div>
-  <h1>{{ .Title }}</h1>
-</div>
-<main>{{ .Content }}</main>
-{{ end }}
-```
-
----
-
 ## statische Assets
 
 - werden meistens in einem eigenen Ordner abgelegt
@@ -465,18 +483,18 @@ layout: two-cols
 
 ## Vergleich CMS und Wartungsaufwand
 
-**Wartung und Sicherheitsupdates**
+<noto-wrench /> **Wartung und Sicherheitsupdates**
 
-- Seite gerendert -> kein Zugriff aufs Backend
-- Wenn die Seite einmal online ist, braucht sie keine Updates da kein Rendering
+- ein Zugriff aufs Backend
+- wenn die Seite einmal online ist, braucht sie keine Updates da kein Rendering
 - lediglich Backend benötigt Wartung
 
-**Feature Breaking und Portierung**
+<noto-fire-extinguisher />**Feature Breaking und Portierung**
 
 - Inhalte über Standards
 - Durch Standards in der Generierung Portierung sehr einfach
 
-**Plugin Hölle**
+<noto-exploding-head />**Plugin Hölle**
 
 - Plugins werden meist nicht benötigt
 - können relativ gekapselt voneinander verwendet werden
@@ -485,12 +503,12 @@ layout: two-cols
 
 ## Skalierungsprobleme
 
-**Webserver und Runtime**
+<noto-satellite-antenna /> **Webserver und Runtime**
 
 - Webserver / CDN als einzige Limitation
 - ausrollen sehr einfach
 
-**Datenbank**
+<noto-file-cabinet /> **Datenbank**
 
 - Auch hier APIs als limitierender Faktor
   - Selbst wenn die Last gross ist, kann bereits Content an den Nutzer ausgeliefert werden (s. Hydration)
@@ -499,12 +517,17 @@ layout: two-cols
 
 ## Umstellung des Workflows am Beispiel Wordpress API
 
-- Wordpress API
-  - [REST API Handbook | WordPress Developer Resources](https://developer.wordpress.org/rest-api/)
-- Medium
-- etc.\
-- Converter
+- viele CMS bieten APIs (Wordpress, Medium, ...)
+- alternative Konverter / Exporter
+- Vorteil APIs, Workflow von Autor*innen beibehalten
+- CMS holt sich bei Rendering Content von API
+- Build Server braucht Internetverbindung!
 
+<div class="text-4xl text-center mt-8 grid grid-cols-5 w-max gap-4">
+<div/><div/><mdi-wordpress /><div/><div/>
+<div/><div/><mdi-arrow-up /><div/><div/>
+<mdi-language-html5 /> <mdi-arrow-right /> <mdi-server /> <mdi-arrow-right /> <mdi-server-network /> 
+</div>
 ---
 
 # Advanced Stuff
@@ -521,19 +544,48 @@ layout: two-cols
 
 **Lazy Hydration**: Partial aber mit Entscheidung wann etwas hydriert wird
 
+<div class="text-sm justify-center content-center flex flex-row">
+
+<div class="border p-4 justify-center content-center flex flex-col">
+<div>Loading</div>
+</div>
+
+<mdi-arrow-right class="text-2xl m-4" />
+
+<div class="border p-4 justify-center content-center flex flex-col">
+<b>Title</b>
+<div class="bg-orange-800 light:bg-orange-200">
+<div>Entry-1</div>
+<div>Entry-2</div>
+</div>
+</div>
+
+
+<mdi-arrow-right class="text-2xl m-4" />
+
+<div class="border p-4 justify-center content-center flex flex-col">
+<b>Title</b>
+<div class="bg-green-800 light:bg-green-200">
+<div>Entry-1</div>
+<div>Entry-2</div>
+<div>Entry-3</div>
+</div>
+</div>
+</div>
+
 ---
 
 ## DSG (Defered Site Generation)
-
-<!-- >
-[Server Side Rendering (SSR) vs. Client Side Rendering (CSR) vs. Pre-Rendering using Static Site Generators (SSG) and client-side hydration. | by Prashant Ram | Oct, 2021 | Medium](https://medium.com/@prashantramnyc/server-side-rendering-ssr-vs-client-side-rendering-csr-vs-pre-rendering-using-static-site-89f2d05182ef)
--->
 
 - viele SSGs bieten alternative Rendering Optionen
 - ermöglicht Flexibilität
 - birgt aber auch Downsides
 - Seiten bei Aufruf generiert
 - So lange im Cache bis sich der Content ändert
+
+<img src="/dsg.webp" class="h-xs" alt="https://make-it-static.thilo-billerbeck.com" />
+<small class="text-gray-400">Quelle: https://www.gatsbyjs.com/blog/deferred-static-generation-guide/</small>
+
 
 ---
 
