@@ -38,10 +38,13 @@ Thilo Billerbeck B.Sc.
 
 Master Informatik Student TU Darmstadt
 
-- <simple-icons-mastodon /> @avocadoom@chaos.social
-- <simple-icons-github /> @thilobillerbeck
-- <simple-icons-twitter /> @thilobillerbeck
-- <simple-icons-matrix /> @avocadoom:avocadoom.de
+<simple-icons-mastodon /> @avocadoom@chaos.social
+
+<simple-icons-github /> @thilobillerbeck
+
+<simple-icons-twitter /> @thilobillerbeck
+
+<simple-icons-matrix /> @avocadoom:avocadoom.de
 
 ---
 layout: center
@@ -102,8 +105,6 @@ layout: center
 - Wenn ein Plugin bricht, bricht vieles mit
 
 <p class="text-center mt-8 text-red-300 light:text-red-600"><b><noto-red-exclamation-mark /> Dieser Zustand verschlimmert sich in der Regel mit dem Alter der Seite <noto-red-exclamation-mark /></b></p>
-
-
 ---
 
 ## Skalierungsprobleme
@@ -114,7 +115,13 @@ layout: center
 - Last kann je nach Komplexität spürbar werden
 
 <noto-file-cabinet /> **Datenbank**
-<img src="/qr.png" class="p-4" alt="https://make-it-static.thilo-billerbeck.com" />
+
+- schwer skalierbar
+- Last kann auch hier zum Problem werden
+
+<p class="text-center mt-8 text-red-300 light:text-red-600"><b><noto-red-exclamation-mark /> Grosse Last führt zu Unerreichbarkeit der Seite <noto-red-exclamation-mark /></b></p>
+
+---
 layout: center
 ---
 
@@ -134,7 +141,11 @@ tl:dr; Webseiten ohne das klassische CMS Backend bzw. serverseitige Generierung
 <div class="p-4 border border-gray-500 m-2"><div class="font-bold">CSS</div><div class="text-sm text-gray-300 light:text-gray-500">Bestimmt das Aussehen der Seite</div></div>
 <div class="p-4 border border-gray-500 m-2"><div class="font-bold">Javascript und co.</div><div class="text-sm text-gray-300 light:text-gray-500">Fügt <b>dynamische</b> Elemente zur Seite hinzu</div></div>
 </div>
-todo
+
+---
+
+## Static Site Generators
+
 <p class="text-yellow-200 light:text-yellow-500 font-bold text-center">
 tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
 </p>
@@ -514,8 +525,7 @@ layout: two-cols
   - Selbst wenn die Last gross ist, kann bereits Content an den Nutzer ausgeliefert werden (s. Hydration)
 
 ---
-
-## Umstellung des Workflows am Beispiel Wordpress API
+todos Workflows am Beispiel Wordpress API
 
 - viele CMS bieten APIs (Wordpress, Medium, ...)
 - alternative Konverter / Exporter
@@ -611,4 +621,14 @@ layout: two-cols
 layout: center
 ---
 
-# Vielen Dank
+# Vielen Dank! :)
+
+<div class="text-gray-300">
+<simple-icons-mastodon /> @avocadoom@chaos.social
+
+<simple-icons-github /> @thilobillerbeck
+
+<simple-icons-twitter /> @thilobillerbeck
+
+<simple-icons-matrix /> @avocadoom:avocadoom.de
+</div>
