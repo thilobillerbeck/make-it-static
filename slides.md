@@ -62,9 +62,9 @@ layout: center
 - [https://www.heise.de/news/Drupal-Team-beseitigt-potenziell-gefaehrliche-Sicherheitsluecke-aus-dem-CMS-6145534.html](https://www.heise.de/news/Drupal-Team-beseitigt-potenziell-gefaehrliche-Sicherheitsluecke-aus-dem-CMS-6145534.html)
 -->
 <div class="grid grid-cols-[1fr,1fr]">
-  <img src="/cms-security-risks/article-1.png" class="p-4" alt="Artikel: Drupal Team beseitigt potenziell gefaehrliche Sicherheitsluecke aus dem CMS." />
-  <img src="/cms-security-risks/article-2.png" class="p-4" alt="Artikel: Schwere Sicherheitsluecke in Woocommerce: Shopbetreiber sollten dringend updaten." />
-  <img src="/cms-security-risks/article-3.png" class="p-4" alt="Artikel: Wordpress: Sicherheitsluecken in beliebtem Plugin betreffen 1 Million Websites" />
+  <img src="/cms-security-risks/article-1.png" class="pr-2 pb-2 pt-4" alt="Artikel: Drupal Team beseitigt potenziell gefaehrliche Sicherheitsluecke aus dem CMS." />
+  <img src="/cms-security-risks/article-2.png" class="pl-2 pb-2 pt-4" alt="Artikel: Schwere Sicherheitsluecke in Woocommerce: Shopbetreiber sollten dringend updaten." />
+  <img src="/cms-security-risks/article-3.png" class="pr-2 pt-2" alt="Artikel: Wordpress: Sicherheitsluecken in beliebtem Plugin betreffen 1 Million Websites" />
 </div>
 
 ---
@@ -130,25 +130,27 @@ layout: center
 
 ---
 
-## statische Seiten
+## Statische Seiten
 
-<p class="text-yellow-200 light:text-yellow-500 font-bold text-center">
+<div class="flex flex-col pt-2">
+<div class="p-4 border border-gray-500 my-2"><div class="font-bold">
+<simple-icons-html5 /> HTML
+</div><div class="text-sm text-gray-400 light:text-gray-500 pt-1">Gibt Struktur und Inhalt vor</div></div>
+<div class="p-4 border border-gray-500 my-2"><div class="font-bold">
+<simple-icons-css3 /> CSS
+</div><div class="text-sm text-gray-400 light:text-gray-500 pt-1">Bestimmt das Aussehen der Seite</div></div>
+<div class="p-4 border border-gray-500 my-2"><div class="font-bold">
+<simple-icons-javascript /> Javascript und co.
+</div><div class="text-sm text-gray-400 light:text-gray-500 pt-1">Fügt <b>dynamische</b> Elemente zur Seite hinzu</div></div>
+</div>
+
+<p class="text-yellow-200 light:text-yellow-500 font-bold">
 tl:dr; Webseiten ohne das klassische CMS Backend bzw. serverseitige Generierung
 </p>
-
-<div class="flex flex-col">
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">HTML</div><div class="text-sm text-gray-300 light:text-gray-500">Gibt Struktur und Inhalt vor</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">CSS</div><div class="text-sm text-gray-300 light:text-gray-500">Bestimmt das Aussehen der Seite</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Javascript und co.</div><div class="text-sm text-gray-300 light:text-gray-500">Fügt <b>dynamische</b> Elemente zur Seite hinzu</div></div>
-</div>
 
 ---
 
 ## Static Site Generators
-
-<p class="text-yellow-200 light:text-yellow-500 font-bold text-center">
-tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
-</p>
 
 - Quasi der Werkzeugkasten der statischen Seite
 - Strikte Trennung von Inhalt und Template/Frontend
@@ -161,15 +163,19 @@ tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
   - Bildverarbeitung
   - ...
 
+<p class="text-yellow-200 light:text-yellow-500 font-bold">
+tl:dr; Tooling, das basierend auf Templates und Daten statische Seiten generiert
+</p>
+
 ---
 
 ## Beispiele für statische Seiten
 
 <div class="grid grid-cols-[1fr,1fr] width-screen">
-  <img src="/example-sites/site-1.png" class="p-4" alt="Screenshot: National Geographic Website" />
-  <img src="/example-sites/site-2.png" class="p-4" alt="Screenshot: ionic Website" />
-  <img src="/example-sites/site-3.png" class="p-4" alt="Screenshot: 1Password Hilfe Website" />
-  <img src="/example-sites/site-4.png" class="p-4" alt="Screenshot: Let's Encrypt Website" />
+  <img src="/example-sites/site-1.png" class="pr-2 pt-4" alt="Screenshot: National Geographic Website" />
+  <img src="/example-sites/site-2.png" class="pl-2 pt-4" alt="Screenshot: ionic Website" />
+  <img src="/example-sites/site-3.png" class="pr-2 pt-4" alt="Screenshot: 1Password Hilfe Website" />
+  <img src="/example-sites/site-4.png" class="pl-2 pt-4" alt="Screenshot: Let's Encrypt Website" />
 </div>
 
 ---
@@ -178,11 +184,11 @@ layout: center
 ## Bekannte SSGs
 
 <div class="flex flex-wrap light:bg-gray-800 rounded ">
-  <img src="/ssg-logos/hugo.png" class="m-12 h-12" alt="Logo: Hugo" />
-  <img src="/ssg-logos/jekyll.png" class="m-12 h-12" alt="Logo: Jekyll" />
-  <img src="/ssg-logos/eleventy.png" class="m-12 h-12" alt="Logo: Eleventy" />
-  <img src="/ssg-logos/gatsby.png" class="m-12 h-12" alt="Logo: Gatsby" />
-  <img src="/ssg-logos/astro.png" class="m-12 h-12" alt="Logo: Astro" />
+  <img src="/ssg-logos/hugo.png" class="mt-4 h-12" alt="Logo: Hugo" />
+  <img src="/ssg-logos/jekyll.png" class="m-4 h-12" alt="Logo: Jekyll" />
+  <img src="/ssg-logos/eleventy.png" class="m-4 h-12" alt="Logo: Eleventy" />
+  <img src="/ssg-logos/gatsby.png" class="m-4 h-12" alt="Logo: Gatsby" />
+  <img src="/ssg-logos/astro.png" class="m-4 h-12" alt="Logo: Astro" />
 </div>
 
 ---
@@ -191,23 +197,24 @@ layout: center
 # Wie funktionieren SSGs?
 
 ---
+layout: center
+---
+## Beispiel: darmstadt.ccc.de
 
-# Beispiel: darmstadt.ccc.de
-
-![Screenshot: darmstadt.ccc.de](/darmstadt-ccc-de.jpeg)
+<img src="/darmstadt-ccc-de.jpeg" class="mt-2 max-h-1/2 w-1/2 h-1/2" alt="Screenshot: darmstadt.ccc.de" />
 
 ---
 layout: center
 ---
 
 
-<h2 class="text-center">Bausteine</h2>
+<h2>Bausteine</h2>
 
 <div class="flex flex-col">
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Inhalten / Daten</div><div class="text-sm text-gray-300 light:text-gray-500">Markdown, YAML, JSON, ...</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Templates und / oder Themes</div><div class="text-sm text-gray-300 light:text-gray-500">HTML Templates, Partials, ...</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">Konfiguration</div><div class="text-sm text-gray-300 light:text-gray-500">Config Files (TOML, YAML, ...</div></div>
-<div class="p-4 border border-gray-500 m-2"><div class="font-bold">statische Assets</div><div class="text-sm text-gray-300 light:text-gray-500">Bilder, Fonts, Scripts, Styles, ...</div></div>
+<div class="p-4 border border-gray-500 my-2"><div class="font-bold">Inhalten / Daten</div><div class="text-sm text-gray-300 light:text-gray-500">Markdown, YAML, JSON, ...</div></div>
+<div class="p-4 border border-gray-500 my-2"><div class="font-bold">Templates und / oder Themes</div><div class="text-sm text-gray-300 light:text-gray-500">HTML Templates, Partials, ...</div></div>
+<div class="p-4 border border-gray-500 my-2"><div class="font-bold">Konfiguration</div><div class="text-sm text-gray-300 light:text-gray-500">Config Files (TOML, YAML, ...</div></div>
+<div class="p-4 border border-gray-500 my-2"><div class="font-bold">statische Assets</div><div class="text-sm text-gray-300 light:text-gray-500">Bilder, Fonts, Scripts, Styles, ...</div></div>
 </div>
 
 
@@ -215,7 +222,7 @@ layout: center
 layout: center
 ---
 
-<h2 class="text-center pb-4">Ordnerstruktur Hugo</h2>
+<h2 class="pb-4">Ordnerstruktur Hugo</h2>
 
 <div class="grid grid-cols-[1fr,3fr] width-screen">
 <div class="font-bold bg-gray-800 p-2 text-gray-100">
@@ -288,12 +295,15 @@ layout: two-cols
 </template>
 <template v-slot:right>
 
-# Inhalte
-
-- Daten mit denen die Seite gefüllt werden soll
-- strukturiert und/oder semi strukturiert
-- meist verschiedene Formate und Qüllen möglich
-- Beispiel rechts: Inhalt darmstadt.ccc.de 
+<div class="ml-4">
+<h2>Inhalte</h2>
+<ul>
+<li>Daten mit denen die Seite gefüllt werden soll</li>
+<li>strukturiert und/oder semi strukturiert</li>
+<li>meist verschiedene Formate und Qüllen möglich</li>
+<li>Beispiel rechts: Inhalt darmstadt.ccc.de</li>
+</ul>
+</div>
 
 </template>
 
@@ -356,11 +366,11 @@ layout: two-cols
 layout: two-cols
 ---
 <template v-slot:default>
-<div class="bg-blue-500 h-100 m-4 p-4 flex flex-col">
-<div class="pb-4 text-center">Base</div>
-<div class="bg-red-500 p-4 text-center flex flex-col">Header</div>
-<div class="bg-orange-500 p-4 text-center flex flex-col flex-1">Main</div>
-<div class="bg-green-500 p-4 text-center flex flex-col">Footer</div>
+<div class="border-2 border-blue-300 h-100 mx-4 p-4 flex flex-col">
+<div class="pb-4 text-center text-blue-300">Base</div>
+<div class="border-2 border-red-300 p-4 text-center flex flex-col text-red-300">Header</div>
+<div class="border-2 border-orange-300 p-4 text-center flex flex-col flex-1 text-orange-300 ">Main</div>
+<div class="border-2 border-green-300 p-4 text-center flex flex-col text-green-300">Footer</div>
 
 </div>
 
@@ -387,8 +397,8 @@ layout: two-cols
 ---
 
 <template v-slot:default>
-<div class="h-100 m-4 p-4 flex flex-col font-mono">
-<div class="p-2 text-gray-400 light:text-gray-600">{ extend "template42" }</div>
+<div class="h-100 flex flex-col font-mono">
+<div class="px-2 pb-2 text-gray-400 light:text-gray-600">{ extend "template42" }</div>
 <div class="p-2">{{ "<article>" }}</div>
 <div class="p-2">
 {{ "<h1>" }}
